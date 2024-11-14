@@ -23,11 +23,16 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
   fold = {
+<<<<<<< HEAD
     enable = true
+=======
+    enable = false
+>>>>>>> 70ae760 (Added more plugins)
   }
 }
 
 -- Enable Treesitter-based folding
+<<<<<<< HEAD
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldlevelstart = 1  -- Start with folds open to level 1
@@ -38,3 +43,15 @@ vim.api.nvim_set_keymap('n', '<leader>o', 'zR', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<leader>c', 'zM', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>o', 'zo', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>c', 'zc', { noremap = true, silent = true })
+=======
+-- vim.opt.foldmethod = 'expr'
+-- vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+-- vim.opt.foldlevelstart = 1  -- Start with folds open to level 1
+
+-- Keybindings for fold management
+-- vim.api.nvim_set_keymap('n', '<leader>z', 'za', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>o', 'zR', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>c', 'zM', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>o', 'zo', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>c', 'zc', { noremap = true, silent = true })
+>>>>>>> 70ae760 (Added more plugins)
