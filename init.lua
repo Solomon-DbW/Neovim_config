@@ -1,19 +1,11 @@
 require("Solomon")
-<<<<<<< HEAD
 print("WELCOME TO NEOVIM")
-=======
-print("Hello")
->>>>>>> 70ae760 (Added more plugins)
 
 -- require'lspconfig'.pyright.setup{}
 
 
 -- Load line numbering configuration
-<<<<<<< HEAD
 require('Solomon.init')
-=======
--- require('Solomon.init')
->>>>>>> 70ae760 (Added more plugins)
 
 local on_attach = function(client, bufnr)
     local opts = { noremap=true, silent=true }
@@ -29,7 +21,6 @@ local on_attach = function(client, bufnr)
 
     -- Other LSP-related mappings can go here...
 end
-<<<<<<< HEAD
 
 -- Other configurations and plugin setups
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -41,7 +32,6 @@ require('lspconfig').pyright.setup{
 require('lspconfig').clangd.setup{
 	capabilities = capabilities,
 }
-=======
 -- Other configurations and plugin setups
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- require('lspconfig').pyright.setup{
@@ -52,4 +42,3 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- require('lspconfig').clangd.setup{
 -- 	capabilities = capabilities,
 -- }
->>>>>>> 70ae760 (Added more plugins)

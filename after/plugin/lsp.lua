@@ -1,14 +1,10 @@
 -- init.lua or your Neovim configuration file
 
-<<<<<<< HEAD
 local lspconfig = require('lspconfig')
 local cmp_nvim_lsp = require('cmp_nvim_lsp')
 
 -- Define the LSP server setup
-lspconfig.pyright.setup({
-=======
 -- local lspconfig = require('lspconfig')
-local cmp_nvim_lsp = require('cmp_nvim_lsp')
 local lsp_zero = require('lsp-zero') 
 
 local lsp_attach = function(client, bufnr)
@@ -18,17 +14,16 @@ local lsp_attach = function(client, bufnr)
   vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
 end
 
-lsp_zero.extend_lspconfig({
-  sign_text = true,
-  lsp_attach = lsp_attach,
-  capabilities = require('cmp_nvim_lsp').default_capabilities(),
-})
+-- lsp_zero.extend_lspconfig({
+--   sign_text = true,
+--   lsp_attach = lsp_attach,
+--   capabilities = require('cmp_nvim_lsp').default_capabilities(),
+-- })
 
 
 
 -- Define the LSP server setup
 require('lspconfig').pyright.setup({
->>>>>>> 70ae760 (Added more plugins)
     capabilities = cmp_nvim_lsp.default_capabilities(),  -- Enable LSP capabilities for nvim-cmp
     on_attach = function(client, bufnr)
         -- Define key mappings or other settings for LSP
@@ -40,8 +35,6 @@ require('lspconfig').pyright.setup({
     end,
 })
 
-<<<<<<< HEAD
-=======
 require('lspconfig').clangd.setup{}
 require('lspconfig').rust_analyzer.setup({
     capabilities = cmp_nvim_lsp.default_capabilities(),  -- Enable LSP capabilities for nvim-cmp
@@ -82,4 +75,3 @@ require('mason-lspconfig').setup({
     end,
   }
 })
->>>>>>> 70ae760 (Added more plugins)
