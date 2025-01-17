@@ -28,7 +28,6 @@ return require('packer').startup(function(use)
     run = ':TSUpdate'
   }
 
-  -- Additional plugins
   use 'windwp/nvim-autopairs'  -- Auto closing brackets & quotes
   use 'nvim-treesitter/playground'  -- Treesitter playground for inspecting syntax trees
   use 'ThePrimeagen/harpoon'  -- Quick navigation between files
@@ -53,9 +52,6 @@ return require('packer').startup(function(use)
   use { 'kristijanhusak/vim-dadbod-ui' }
   use { 'kristijanhusak/vim-dadbod-completion' }
 
-  -- use {
-  --   'Exafunction/codeium.vim',
-  -- }
 
   use { 'VonHeikemen/lsp-zero.nvim', branch = 'v4.x' }
   use 'williamboman/mason.nvim'
@@ -76,6 +72,9 @@ return require('packer').startup(function(use)
   use 'dense-analysis/ale'
 
   use 'github/copilot.vim'
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+end}
 
 end)
 
